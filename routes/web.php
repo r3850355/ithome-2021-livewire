@@ -13,7 +13,15 @@ use App\Http\Livewire\Todo;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+/*
+  每日的範例
+*/
 Route::get('/day5', App\Http\Livewire\Example\Day5::class);
 Route::get('/day6', App\Http\Livewire\Example\Day6::class);
+Route::get('/day7', App\Http\Livewire\Example\Day7::class);
 
+/*
+  實作的部分
+*/
 Route::get('/todo', Todo::class);
