@@ -13,5 +13,6 @@ use App\Http\Livewire\Todo;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/day5', App\Http\Livewire\Example\Day5::class);
 
 Route::get('/todo', Todo::class);

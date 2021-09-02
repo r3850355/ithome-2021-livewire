@@ -1,3 +1,4 @@
-<div>
-    {{-- Because she competes with no one, no one can compete with her. --}}
+<div class="text-center">
+    <h2>{{ $title }}</h2>
+    <h4>{{ $subtitle }}</h4>
 </div>
