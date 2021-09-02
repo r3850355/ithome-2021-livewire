@@ -1,63 +1,61 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+## 系統環境
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+PHP 版本盡可能使用 7.4，不然有些功能的做法會不太一樣哦～
 
-## About Laravel
+|名稱|版本|
+|---|---|
+|PHP|^ 7.4|
+|Laravel|^ 8|
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+另外要實作後面的範例還會用到 MySQL 或是 MariaDB 則一即可。
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 安裝
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+首先在 git pull 下來後進到本資料夾，並透過 Composer 安裝
 
-## Learning Laravel
+```
+git pull https://github.com/r3850355/ithome-2021-livewire.git
+cd ithome-2021-livewire
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+composer install
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+> 如果還沒安裝 composer 的請先幫我安裝，[官網點我](https://getcomposer.org/)
+> 
+> 安裝過程如果有少一些套件就用套件名稱去 Google 搜尋安裝補齊就能安裝好了
+> 
+>  因為 Composer 不會自動安裝相依套件，這邊可能是安裝過程最麻煩的地方
 
-## Laravel Sponsors
+安裝好之後先複製 `.env` 檔，記得去改裡面的資料表名稱及資料庫號密碼
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```
+cp .env.exmaple .env
+```
 
-### Premium Partners
+然後產生金鑰
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
+```
+php artisan key:generate
+```
 
-## Contributing
+## 啟動
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+透過下面指令就可以把測試環境跑起來啦
 
-## Code of Conduct
+```
+php artisan serve
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+運行成功的話，在終端機會有下面這些字
 
-## Security Vulnerabilities
+```
+Starting Laravel development server: http://127.0.0.1:8000
+[Thu Sep  2 22:48:14 2021] PHP 7.4.16 Development Server (http://127.0.0.1:8000) started
+```
+之後打開瀏覽器網址輸入
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```
+127.0.0.1:8000
+```
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+就能夠進到頁面中了！！
