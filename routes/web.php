@@ -14,5 +14,6 @@ use App\Http\Livewire\Todo;
 |
 */
 Route::get('/day5', App\Http\Livewire\Example\Day5::class);
+Route::get('/day6', App\Http\Livewire\Example\Day6::class);
 
 Route::get('/todo', Todo::class);
