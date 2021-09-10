@@ -22,6 +22,7 @@ Route::get('/day6', App\Http\Livewire\Example\Day6::class);
 Route::get('/day7', App\Http\Livewire\Example\Day7::class);
 Route::get('/day8', App\Http\Livewire\Example\Day8::class);
 Route::get('/day9', App\Http\Livewire\Example\Day9::class);
+Route::get('/day10', App\Http\Livewire\Example\Day10::class);
 /*
   實作的部分
 */
