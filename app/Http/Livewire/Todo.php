@@ -8,15 +8,15 @@ use App\Models\Todo as TodoModel;
 
 class Todo extends Component
 {
-    public $todoInput;
+    public $title;
 
     protected $rules = [
-        'todoInput' => 'required'
+        'title' => 'required'
     ];
     
     public function render()
     {
-        return view('livewire.todo')->layout('layouts.app');
+        return view('livewire.todo');
     }
 
     public function getTodoProperty()
@@ -27,13 +27,11 @@ class Todo extends Component
     public function addTodo()
     {
         // 驗證
-        $this->validate();
-        TodoModel::create([
-            'title' => $this->todoInput,
-        ]);
+        $validatedData = $this->validate();
+        TodoModel::create($validatedData);
 
         // 清空剛剛輸入的值
-        $this->todoInput = null;
+        $this->title = null;
     }
 
     public function checkTodo($id)
