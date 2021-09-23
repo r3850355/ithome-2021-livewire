@@ -10,18 +10,25 @@ class Todo extends Component
 {
     public $title;
 
+    public $date;
+
     protected $rules = [
         'title' => 'required'
+    ];
+
+    protected $queryString = [
+        'date',
     ];
     
     public function render()
     {
+        if (!$this->date) $this->date = date('Y-m-d');
         return view('livewire.todo');
     }
 
     public function getTodoProperty()
     {
-        return TodoModel::whereDate('created_at', date('Y-m-d'))->get();
+        return TodoModel::whereDate('created_at', $this->date)->get();
     }
 
     public function addTodo()
@@ -37,7 +44,7 @@ class Todo extends Component
     public function checkTodo($id)
     {
         $todo = TodoModel::find($id);
-        $todo->done = !$todo->done;
+        $todo->done = true;
         $todo->save();
     }
 
