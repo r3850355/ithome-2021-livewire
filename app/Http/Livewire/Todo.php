@@ -13,7 +13,8 @@ class Todo extends Component
     public $date;
 
     protected $rules = [
-        'title' => 'required'
+        'title' => 'required',
+        'date' => 'required',
     ];
 
     protected $queryString = [
@@ -28,7 +29,7 @@ class Todo extends Component
 
     public function getTodoProperty()
     {
-        return TodoModel::whereDate('created_at', $this->date)->get();
+        return TodoModel::whereDate('date', $this->date)->get();
     }
 
     public function addTodo()
