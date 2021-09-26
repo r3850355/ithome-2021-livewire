@@ -13,7 +13,7 @@
                 <span class="text-sm text-gray-600">網路價</span>
                 <span class="text-2xl text-red-600 font-bold">${{ $item->price }}</span>
             </p>
-            <button class="bg-red-600 text-gray-50 p-2 w-36 rounded-md">加入購物車</button>
+            <button class="bg-red-600 text-gray-50 p-2 w-36 rounded-md" wire:click="addToCart">加入購物車</button>
             <p class="text-gray-400 mt-5">＊內容之圖片、品名及價格皆取自網路，此為學習範例網站並無販售/代理該產品</p>
         </div>
         <div class="col-span-3 border-t mx-5"></div>
