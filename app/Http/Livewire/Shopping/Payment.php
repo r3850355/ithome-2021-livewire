@@ -18,7 +18,7 @@ class Payment extends Component
 
     public function render()
     {
-        return view('livewire.shopping.payment');
+        return view('livewire.shopping.payment')->layout('layouts.shopping');
     }
 
     public function deleteItem($key)

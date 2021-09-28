@@ -14,6 +14,13 @@
     </head>
     <body>
         <div>
+            <div class="h-12 bg-blue-600 p-2 mb-10 flex justify-between">
+                <div class="text-white text-2xl font-black">iThome <span class="text-lg">鐵人賽2021 - Livewire DEMO</span></div>
+                <div class="flex gap-3">
+                    <a href="https://github.com/r3850355/ithome-2021-livewire"><button class="text-white bg-black h-8 rounded px-5 py-1">GitHub</button></a>
+                    <a href="https://ithelp.ithome.com.tw/articles/10259642"><button class="text-white bg-black h-8 rounded px-5 py-1">文章列表</button></a>
+                </div>
+            </div>
             {{ $slot }}
         </div>
         @livewireScripts

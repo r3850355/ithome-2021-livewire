@@ -23,7 +23,7 @@ class Index extends Component
 
         return view('livewire.shopping.index', [
             'list' => Good::all(),
-        ]);
+        ])->layout('layouts.shopping');
     }
 
     public function selectItem($itemId)

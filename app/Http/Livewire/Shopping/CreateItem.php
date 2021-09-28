@@ -24,7 +24,7 @@ class CreateItem extends Component
 
     public function render()
     {
-        return view('livewire.shopping.create-item');
+        return view('livewire.shopping.create-item')->layout('layouts.shopping');
     }
 
     //
