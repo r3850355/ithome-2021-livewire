@@ -45,4 +45,9 @@ class Index extends Component
         }
     }
 
+    public function gotoCart()
+    {
+        return redirect()->route('shopping-payment');
+    }
+
 }

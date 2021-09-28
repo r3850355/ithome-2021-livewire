@@ -37,4 +37,5 @@ Route::get('/day18', App\Http\Livewire\Example\Day18::class);
 */
 Route::get('/todo', Todo::class);
 Route::get('/shopping', App\Http\Livewire\Shopping\Index::class);
-Route::get('/shopping-create', App\Http\Livewire\Shopping\CreateItem::class);
+Route::get('/shopping/payment', App\Http\Livewire\Shopping\Payment::class)->name('shopping-payment');
+// Route::get('/shopping-create', App\Http\Livewire\Shopping\CreateItem::class);

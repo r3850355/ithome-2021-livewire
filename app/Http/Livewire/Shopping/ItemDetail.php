@@ -16,12 +16,12 @@ class ItemDetail extends Component
 
     public function addToCart()
     {
-        $item = array([
+        $item = array(
             'id' => $this->item->id,
             'name' => $this->item->name,
             'image_url' => $this->item->image_url,
             'price' => $this->item->price,
-        ]);
+        );
 
         session()->push('cart', $item);
         
