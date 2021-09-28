@@ -45,5 +45,9 @@
       <button class="w-24 py-1 rounded bg-red-600 text-white text-sm">ATM轉帳</button>
       <button class="w-24 py-1 rounded bg-red-600 text-white text-sm">貨到付款</button>
     </div>
+    <!--  -->
+    <div class="mt-5 text-right">
+        <a href="{{ route('shopping') }}"><button class="w-36 py-2 rounded bg-blue-600 text-white text-sm">返回，繼續購物</button></a>
+    </div>
   </div>
 </div>
